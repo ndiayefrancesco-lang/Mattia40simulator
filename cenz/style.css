@@ -1,0 +1,127 @@
+body{
+    background-color: aqua;
+    font-family: arial;
+    font-weight: bold;
+display: flex;
+justify-content: center;
+
+}
+
+.parent {
+display: grid;
+grid-template-columns: 270px 300px 270px;
+grid-template-rows: repeat(3, 200px);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 4 / 2;
+display: flex;
+align-items: center;
+justify-content: center; }
+
+.div2 { grid-area: 1 / 2 / 3 / 3; 
+margin-left: 50px;
+position: relative;
+}
+
+.div3 { grid-area: 3 / 2 / 4 / 3;
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-left: 90px;
+}
+
+.div4 { grid-area: 1 / 3 / 4 / 4; 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.pallina{
+    height: 100px;
+}
+
+.geran{
+    height: 200px;
+}
+
+.io{height: 300px;
+position: absolute;
+left: 80px;
+bottom: 40px;
+}
+
+.nono{
+    height: 300px;
+    opacity: 0;
+}
+
+.palline{
+    position: absolute;
+}
+
+.tremare{
+    animation: trema 0.5s;
+    animation-iteration-count: 6;
+}
+
+@keyframes trema {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(0px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(2px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(0deg); }
+}
+
+.ah{
+    height: 1px; ;
+}
+
+.tit{
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+.parent {
+display: grid;
+grid-template-columns: repeat(2, 200px);
+grid-template-rows: repeat(4, 200px);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 2 / 2 / 3; }
+.div2 { grid-area: 2 / 1 / 4 / 3; 
+padding-left: 20px;
+}
+.div3 { grid-area: 4 / 1 / 5 / 3; }
+.div4 { grid-area: 1 / 1 / 2 / 2; }
+
+
+.geran{
+   transform: scale(0.5);
+}
+
+.nono{
+    height: 180px;
+}
+
+
+
+}
+
+.lancia{
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+}
